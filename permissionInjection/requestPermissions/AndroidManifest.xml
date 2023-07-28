@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" package="com.example.simple_app" platformBuildVersionCode="32" platformBuildVersionName="12">
+<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="32"> </uses-sdk>
+<uses-permission android:name="android.permission.CAMERA"> </uses-permission>
+<uses-permission android:name="android.permission.RECORD_AUDIO"> </uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"> </uses-permission>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"> </uses-permission>
+<uses-permission android:name="android.permission.READ_CALL_LOG"> </uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE"> </uses-permission>
+<uses-permission android:name="android.permission.READ_SMS"> </uses-permission>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"> </uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"> </uses-permission>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"> </uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"> </uses-permission>
+<uses-permission android:name="android.permission.INTERNET"> </uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"> </uses-permission>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"> </uses-permission>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE"> </uses-permission>
+<uses-permission android:name="android.permission.WAKE_LOCK"> </uses-permission>
+<uses-permission android:name="android.permission.VIBRATE"> </uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"> </uses-permission>
+<application android:theme="@7F11023D" android:label="@7F10001D" android:icon="@7F0D0000" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true" android:roundIcon="@7F0D0001" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+<activity android:theme="@7F11023F" android:label="@7F10001D" android:name="com.example.simple_app.MainActivity" android:exported="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN"> </action>
+<category android:name="android.intent.category.LAUNCHER"> </category>
+</intent-filter>
+</activity>
+<provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.example.simple_app.androidx-startup">
+<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"> </meta-data>
+<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"> </meta-data>
+</provider>
+<uses-library android:name="androidx.window.extensions" android:required="false"> </uses-library>
+<uses-library android:name="androidx.window.sidecar" android:required="false"> </uses-library>
+</application>
+</manifest>
